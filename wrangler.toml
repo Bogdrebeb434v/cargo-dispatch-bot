@@ -1,0 +1,18 @@
+name = "cargo-dispatch-bot"
+main = "src/worker.js"
+compatibility_date = "2025-10-11"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+crons = ["0 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cargo-bot"
+database_id = "c7af9bab-21a8-4474-8826-ce6ef31b7ac7"
+
+# Секреты: wrangler secret put BOT_TOKEN / OWNER_TELEGRAM_ID / WEBHOOK_SECRET
+# [vars]
+# BOT_USERNAME = "your_bot"
+# CHANNEL_ID = ""
+# OPENAI_MODEL = "gpt-4.1-mini"
